@@ -27,10 +27,11 @@ const ChatWidget = () => {
     if (newMessage.trim() === "") {
       return;
     }
+    setUserMessage([...message, newMessage]);
     fetchMessage(newMessage)
       .then((res) => {
         console.log(res);
-        setUserMessage([...message, newMessage]);
+
         setBotMessage([...botMessage, res]);
         setNewMessage("");
       })
@@ -50,7 +51,7 @@ const ChatWidget = () => {
       <div className="mt-12 p-2">
         <div>
           <div className="bg-[#111] p-3 rounded-xl text-white">{message}</div>
-          
+
           <div className="bg-[#fff] p-3 rounded-xl">{botMessage}</div>
         </div>
       </div>
