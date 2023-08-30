@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 const ChatWidget = () => {
-  const [message, setUserMessage] = useState("");
-  const [botMessage, setBotMessage] = useState("");
+  const [message, setUserMessage] = useState([]);
+  const [botMessage, setBotMessage] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
   const fetchMessage = async (message) => {
-    const url = "http://localhost:8000/api/v1/chat";
+    const url = "https://ella-ai.cyclic.app/api/v1/chat";
     try {
       const response = await fetch(url, {
         method: "POST",
