@@ -5,7 +5,15 @@ import { executor } from "./agent.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  "https://ella-ai.vercel.app"
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 const port = '8000';
