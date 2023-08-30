@@ -119,7 +119,6 @@ const generateImage = async (prompt) => {
   }
 };
 
-
 export const generateImages = new DynamicTool({
   name: "generate_image",
   description: `Call this to generate image, input should prompt to generate the image`,
