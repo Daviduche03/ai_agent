@@ -50,9 +50,25 @@ const ChatWidget = () => {
       </div>
       <div className="mt-12 p-2">
         <div>
-          <div className="bg-[#111] p-3 rounded-xl text-white">{message}</div>
+          <div className="">
+            {" "}
+            {message.map((messag, index) => (
+              <div key={index}>
+                <div className="bg-[#111] p-3 rounded-xl text-white">
+                  {messag}
+                </div>
+              </div>
+            ))}
+          </div>
 
-          <div className="bg-[#fff] p-3 rounded-xl">{botMessage}</div>
+          <div className="">
+            {" "}
+            {botMessage.map((bot, index) => (
+              <div key={index}>
+                <div className="bg-[#fff] p-3 rounded-xl ">{bot}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="bottom gap-2 flex justify-between">
