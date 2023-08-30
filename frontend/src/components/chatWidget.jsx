@@ -50,7 +50,7 @@ const ChatWidget = () => {
       </div>
       <div className="mt-12 p-2">
         <div>
-          <div className="">
+          <div className="mb-2">
             {" "}
             {message.map((messag, index) => (
               <div key={index}>
@@ -61,7 +61,7 @@ const ChatWidget = () => {
             ))}
           </div>
 
-          <div className="">
+          <div className="mb-2">
             {" "}
             {botMessage.map((bot, index) => (
               <div key={index}>
